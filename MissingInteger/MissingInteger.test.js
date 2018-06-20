@@ -31,4 +31,8 @@ describe("Correctness tests", () => {
   test("negative_only  ", () => {
     // expect(MissingInteger([-100, -50, -1])).toBe(1);
   });
+  test("custom  ", () => {
+    expect(MissingInteger([1, 5, 3])).toBe(2);
+    expect(MissingInteger([3])).toBe(1);
+  });
 });

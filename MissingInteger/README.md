@@ -16,12 +16,14 @@ Given A = [−1, −3], the function should return 1.
 
 Assume that:
 
-N is an integer within the range [1..100,000];
-each element of array A is an integer within the range [−1,000,000..1,000,000].
+- N is an integer within the range [1..100,000];
+- each element of array A is an integer within the range [−1,000,000..1,000,000].
+
 Complexity:
 
-expected worst-case time complexity is O(N);
-expected worst-case space complexity is O(N) (not counting the storage required for input arguments).
+- expected worst-case time complexity is O(N);
+- expected worst-case space complexity is O(N) (not counting the storage required for input arguments).
+
 Copyright 2009–2018 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited.
 
 # Time complexity
@@ -40,5 +42,8 @@ Copyright 2009–2018 by Codility Limited. All Rights Reserved. Unauthorized cop
 
 # 알게된 점
 
+> 메모리(space complexity), 성능(time complexity)
+
 - 메모리와 성능 사이의 Trade-off 관계를 생각해보자
-  - 메모리를 많이 사용할수록 성능이 올라가고, 메모리를 적게 사용할수록 성능이 떨어진다.
+  - 메모리를 많이 사용할수록 성능 올라가고, 메모리를 적게 사용할수록 성능 떨어진다.
+- if 문 개수는 time complexity 에 관여하지 않는다.

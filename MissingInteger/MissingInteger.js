@@ -27,27 +27,37 @@ Copyright 2009–2018 by Codility Limited. All Rights Reserved. Unauthorized cop
 // console.log('this is a debug message');
 
 /**
- * yellowgg2 version 2
+ * qvil version 2
  */
 function MissingInteger(A) {
-  let copyArray = [];
-  for (let i = 0; i < A.length; i++) {
-    if (A[i] > 0) {
-      copyArray[A[i]] = true;
-    }
-  }
+  let startNumber = 1; // Smallest positive number
+  let table = []; // Hash table concept
 
-  for (let j = 1; j < copyArray.length; j++) {
-    if (copyArray[j] === true && copyArray[j + 1] !== true) {
+  // Loop all table value
+  for (let i = 0; i < A.length; i++) {
+    const element = A[i];
+    // Check positive number
+    if (element >= startNumber) {
+      table[element] = true;
+    }
+    // Just check array blank space
+    // If element < startNumber, table[element] = undefined
+    // else {
+    //   console.log(table[element]); // undefined
+    // }
+  }
+  // Loop table
+  for (let j = startNumber; j < table.length; j++) {
+    if (table[j] && !table[j + 1]) {
       return j + 1;
     }
-
-    if (!copyArray[j]) {
+    // Check if smallist positive number larger than startNumber
+    if (!table[j]) {
       return j;
     }
   }
 
-  return 1;
+  return startNumber; // Is it need?
 }
 
 module.exports = MissingInteger;
