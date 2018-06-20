@@ -1,0 +1,22 @@
+{
+  "name": "codility",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qvil/codility.git"
+  },
+  "author": "qvil",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qvil/codility/issues"
+  },
+  "homepage": "https://github.com/qvil/codility#readme",
+  "dependencies": {
+    "jest": "^23.1.0"
+  }
+}
