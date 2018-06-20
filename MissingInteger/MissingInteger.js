@@ -27,7 +27,7 @@ Copyright 2009–2018 by Codility Limited. All Rights Reserved. Unauthorized cop
 // console.log('this is a debug message');
 
 /**
- * yellowgg2 ver.
+ * yellowgg2 version 2
  */
 function MissingInteger(A) {
   let copyArray = [];
@@ -37,11 +37,16 @@ function MissingInteger(A) {
     }
   }
 
-  for (let j = 0; j < copyArray.length; j++) {
+  for (let j = 1; j < copyArray.length; j++) {
     if (copyArray[j] === true && copyArray[j + 1] !== true) {
       return j + 1;
     }
+
+    if (!copyArray[j]) {
+      return j;
+    }
   }
+
   return 1;
 }
 
