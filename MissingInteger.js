@@ -19,8 +19,8 @@ N is an integer within the range [1..100,000];
 each element of array A is an integer within the range [−1,000,000..1,000,000].
 Complexity:
 
-expected worst-case time complexity is O(N);
-expected worst-case space complexity is O(N) (not counting the storage required for input arguments).
+expected worst-case time complexity is O(N); // 중복 for문 하지 말라는 뜻
+expected worst-case space complexity is O(N) (not counting the storage required for input arguments). // 배열의 크기를 N까지 사용 할 수 있다.
 Copyright 2009–2018 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited.
 */
 // you can write to stdout for debugging purposes, e.g.
@@ -78,3 +78,22 @@ function solution(A) {
 console.log(solution([1, 3, 6, 4, 1, 2])); // 5
 console.log(solution([1, 2, 3])); // 4
 console.log(solution([-1, -3])); // 1
+
+/**
+ * yellowgg2 ver.
+ */
+// function solution(A) {
+//   let copyArray = [];
+//   for (let i = 0; i < A.length; i++) {
+//     if (A[i] > 0) {
+//       copyArray[A[i]] = true;
+//     }
+//   }
+
+//   for (let j = 0; j < copyArray.length; j++) {
+//     if (copyArray[j] === true && copyArray[j + 1] !== true) {
+//       return j + 1;
+//     }
+//   }
+//   return 1;
+// }
